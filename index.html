@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Events + Dining Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"> EventDine</h1>
+            <nav class="nav">
+                <a href="#events">Events</a>
+                <a href="#dining">Dining</a>
+                <a href="#planner">My Planner</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Discover Events & Dining Near You</h2>
+            <p class="hero-subtitle">Plan your perfect day with local events and great restaurants</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="events">
+        <div class="container">
+            <div class="search-card">
+                <h3>Search Events</h3>
+                <form class="search-form" id="eventSearchForm">
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Enter city name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">Event Type</label>
+                        <select id="eventType">
+                            <option value="">All Events</option>
+                            <option value="music">Music</option>
+                            <option value="sports">Sports</option>
+                            <option value="arts">Arts & Theatre</option>
+                            <option value="family">Family</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateRange">Date</label>
+                        <input type="date" id="dateRange">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search Events</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h3>Event Results</h3>
+            <div id="eventResults" class="results-grid">
+                <!-- Placeholder event cards -->
+                <div class="event-card placeholder">
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <h4 class="event-title">Event Title</h4>
+                        <p class="event-date">📅 Date & Time</p>
+                        <p class="event-venue">📍 Venue Name</p>
+                        <p class="event-price">💵 Price Range</p>
+                        <button class="btn btn-secondary">Add to Planner</button>
+                    </div>
+                </div>
+                <div class="event-card placeholder">
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <h4 class="event-title">Event Title</h4>
+                        <p class="event-date">📅 Date & Time</p>
+                        <p class="event-venue">📍 Venue Name</p>
+                        <p class="event-price">💵 Price Range</p>
+                        <button class="btn btn-secondary">Add to Planner</button>
+                    </div>
+                </div>
+                <div class="event-card placeholder">
+                    <div class="event-image"></div>
+                    <div class="event-content">
+                        <h4 class="event-title">Event Title</h4>
+                        <p class="event-date">📅 Date & Time</p>
+                        <p class="event-venue">📍 Venue Name</p>
+                        <p class="event-price">💵 Price Range</p>
+                        <button class="btn btn-secondary">Add to Planner</button>
+                    </div>
+                </div>
+            </div>
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading events...</p>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section class="dining-section" id="dining">
+        <div class="container">
+            <h3>Nearby Restaurants</h3>
+            <div class="search-card">
+                <form class="search-form" id="diningSearchForm">
+                    <div class="form-group">
+                        <label for="diningLocation">Location</label>
+                        <input type="text" id="diningLocation" placeholder="Enter location">
+                    </div>
+                    <div class="form-group">
+                        <label for="cuisine">Cuisine Type</label>
+                        <select id="cuisine">
+                            <option value="">All Cuisines</option>
+                            <option value="italian">Italian</option>
+                            <option value="mexican">Mexican</option>
+                            <option value="asian">Asian</option>
+                            <option value="american">American</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Find Restaurants</button>
+                </form>
+            </div>
+            <div id="diningResults" class="results-grid">
+                <!-- Placeholder restaurant cards -->
+                <div class="restaurant-card placeholder">
+                    <div class="restaurant-image"></div>
+                    <div class="restaurant-content">
+                        <h4 class="restaurant-name">Restaurant Name</h4>
+                        <p class="restaurant-cuisine">🍽️ Cuisine Type</p>
+                        <p class="restaurant-rating">⭐ Rating</p>
+                        <p class="restaurant-address">📍 Address</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planner Section -->
+    <section class="planner-section" id="planner">
+        <div class="container">
+            <h3>My Planner</h3>
+            <div class="planner-content">
+                <p class="empty-state">Your planner is empty. Add events to get started!</p>
+                <div id="plannerItems" class="planner-items"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EventDine - Your Local Events & Dining Planner</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

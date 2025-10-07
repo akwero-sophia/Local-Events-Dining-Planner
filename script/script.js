@@ -18,7 +18,7 @@ const plannerItems = document.getElementById('plannerItems');
 function init() {
     setupEventListeners();
     loadPlannerFromStorage();
-    testTicketmasterAPI();
+    //testTicketmasterAPI();
 }
 
 // Setup event listeners

@@ -18,7 +18,7 @@ const plannerItems = document.getElementById('plannerItems');
 function init() {
     setupEventListeners();
     loadPlannerFromStorage();
-    //testTicketmasterAPI();
+    // Removed automatic API test - events will only load when user searches
 }
 
 // Setup event listeners
@@ -27,7 +27,7 @@ function setupEventListeners() {
     diningSearchForm.addEventListener('submit', handleDiningSearch);
 }
 
-// Test Ticketmaster API with sample query
+// Test Ticketmaster API with sample query (only called manually for debugging)
 async function testTicketmasterAPI() {
     console.log('Testing Ticketmaster API...');
     
@@ -303,5 +303,6 @@ console.log(`
 4. Replace 'YOUR_API_KEY_HERE' in script.js with your actual key
 5. Refresh the page to test the API connection
 
-The app will automatically test the API connection on load.
+Note: To manually test the API, open browser console and type:
+testTicketmasterAPI()
 `);

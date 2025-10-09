@@ -291,18 +291,4 @@ if (document.readyState === 'loading') {
     init();
 }
 
-// Log instructions for API key
-console.log(`
-╔════════════════════════════════════════════════════════════╗
-║  TICKETMASTER API SETUP INSTRUCTIONS                       ║
-╚════════════════════════════════════════════════════════════╝
-
-1. Get your FREE API key from: https://developer.ticketmaster.com/
-2. Create an account and register a new app
-3. Copy your Consumer Key (API Key)
-4. Replace 'YOUR_API_KEY_HERE' in script.js with your actual key
-5. Refresh the page to test the API connection
-
-Note: To manually test the API, open browser console and type:
-testTicketmasterAPI()
-`);
+ 

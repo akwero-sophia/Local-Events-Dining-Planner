@@ -35,11 +35,11 @@
                 <form class="search-form" id="eventSearchForm">
                     <div class="form-group">
                         <label for="location">Location</label>
-                        <input type="text" id="location" placeholder="Enter city name" required>
+                        <input type="text" id="location" name="location" placeholder="Enter city name" required>
                     </div>
                     <div class="form-group">
                         <label for="eventType">Event Type</label>
-                        <select id="eventType">
+                        <select id="eventType" name="eventType">
                             <option value="">All Events</option>
                             <option value="music">Music</option>
                             <option value="sports">Sports</option>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group">
                         <label for="dateRange">Date</label>
-                        <input type="date" id="dateRange">
+                        <input type="date" id="dateRange" name="dateRange">
                     </div>
                     <button type="submit" class="btn btn-primary">Search Events</button>
                 </form>
@@ -64,7 +64,7 @@
             <div id="eventResults" class="results-grid">
                 <!-- Placeholder event cards -->
                 <div class="event-card placeholder">
-                    <div class="event-image"></div>
+                    <div class="event-image" role="presentation" aria-hidden="true"></div>
                     <div class="event-content">
                         <h4 class="event-title">Event Title</h4>
                         <p class="event-date">📅 Date & Time</p>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="event-card placeholder">
-                    <div class="event-image"></div>
+                    <div class="event-image" role="presentation" aria-hidden="true"></div>
                     <div class="event-content">
                         <h4 class="event-title">Event Title</h4>
                         <p class="event-date">📅 Date & Time</p>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="event-card placeholder">
-                    <div class="event-image"></div>
+                    <div class="event-image" role="presentation" aria-hidden="true"></div>
                     <div class="event-content">
                         <h4 class="event-title">Event Title</h4>
                         <p class="event-date">📅 Date & Time</p>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div id="loadingSpinner" class="loading-spinner">
-                <div class="spinner"></div>
+                <div class="spinner" role="status" aria-live="polite"></div>
                 <p>Loading events...</p>
             </div>
             <div id="errorMessage" class="error-message"></div>
@@ -110,11 +110,11 @@
                 <form class="search-form" id="diningSearchForm">
                     <div class="form-group">
                         <label for="diningLocation">Location</label>
-                        <input type="text" id="diningLocation" placeholder="Enter location">
+                        <input type="text" id="diningLocation" name="diningLocation" placeholder="Enter location">
                     </div>
                     <div class="form-group">
                         <label for="cuisine">Cuisine Type</label>
-                        <select id="cuisine">
+                        <select id="cuisine" name="cuisine">
                             <option value="">All Cuisines</option>
                             <option value="italian">Italian</option>
                             <option value="mexican">Mexican</option>
@@ -128,7 +128,7 @@
             <div id="diningResults" class="results-grid">
                 <!-- Placeholder restaurant cards -->
                 <div class="restaurant-card placeholder">
-                    <div class="restaurant-image"></div>
+                    <div class="restaurant-image" role="presentation" aria-hidden="true"></div>
                     <div class="restaurant-content">
                         <h4 class="restaurant-name">Restaurant Name</h4>
                         <p class="restaurant-cuisine">🍽️ Cuisine Type</p>
